@@ -1,0 +1,25 @@
+# NOTE: Uncomment lines below to make CI/CD work.
+
+# # Add a `.` in front of a job to make it hidden.
+# # Add a `&reference` to make it a reusable template.
+# # Note that we don't have dashes anymore.
+# .init_ssh: &init_ssh |
+#   eval $(ssh-agent -s)
+#   echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+#   mkdir -p ~/.ssh
+#   chmod 700 ~/.ssh
+#   echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+#   chmod 644 ~/.ssh/known_hosts
+
+# deploy:
+#   stage: deploy
+#   image: 
+#     name: deployphp/deployer:v7
+#     entrypoint: [""]
+#   tags:
+#     - docker
+#   script:
+#     - *init_ssh
+#     - dep deploy -vvv --revision="${CI_COMMIT_SHA}"
+#   only:
+#     - main

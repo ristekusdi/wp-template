@@ -1,0 +1,22 @@
+# Ignore WordPress core files
+wp-admin
+wp-includes
+wp-content/plugins/akismet
+wp-content/plugins/hello.php
+wp-content/themes/twenty*
+index.php
+wp-*.php
+!wp-config.php
+xmlrpc.php
+license.txt
+readme.html
+
+# Ignore composer deps
+vendor
+
+.env
+wordpress/*
+!wordpress/.keep
+db/*
+!db/.keep
+DS_Store
