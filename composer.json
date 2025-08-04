@@ -1,5 +1,12 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "ristekusdi/wp-template",
+    "type": "project",
+    "description": "The skeleton application for the WordPress template.",
+    "keywords": ["wordpress", "template", "skeleton"],
+    "license": "MIT",
     "require": {
+        "php": "^8.2",
         "vlucas/phpdotenv": "^5.6"
     }
 }
